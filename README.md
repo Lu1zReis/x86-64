@@ -2,7 +2,7 @@
 ### Repositório de Estudos da Arquitetura x86-64. 
 Implementando bibliotecas:
 - [X] strlen
-- [ ] memcpy
+- [x] memcpy
 - [ ] memset
 - [ ] strcmp
 - [ ] reverse
