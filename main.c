@@ -20,5 +20,12 @@ int main(void)
 
     printf("%s\n", destino);
 
+
+    char dest[6];
+
+    char *res = memset_asm(dest, 'A', sizeof(dest)-1); // se deixarmos ate o limite, ele pode pegar o espaco da memoria de outra variavel
+
+    printf("TESTE: %s\n", dest);
+
     return 0;
 }
