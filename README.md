@@ -5,7 +5,7 @@ Implementando bibliotecas:
 - [X] memcpy
 - [X] memset
 - [X] strcmp
-- [ ] reverse
+- [X] reverse
 - [ ] to_upper
 - [ ] to_lower
 - [ ] itoa

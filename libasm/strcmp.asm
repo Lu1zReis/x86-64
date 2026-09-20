@@ -1,18 +1,21 @@
+; size_t strcmp_asm(const char *str, const char *str2);
+;                               rdi,              rsi
+
 section .text
 global strcmp_asm
 
 strcmp_asm:
-    xor rcx, rcx      ; contador do rdi e rsi
+    xor rcx, rcx                ; contador do rdi e rsi
 
 .loop:
-    cmp byte [rdi + rcx], 0
+    cmp byte [rdi + rcx], 0     ; verificando se chegou no fim em str1
     jz .b_greater
 
-    cmp byte [rsi + rcx], 0
+    cmp byte [rsi + rcx], 0     ; verificando se chegou no fim em str2
     jz .a_greater
 
-    mov ah, [rdi + rcx]
-    cmp byte [rdi + rcx], ah
+    mov al, [rsi + rcx]
+    cmp byte [rdi + rcx], al
     jne .not_equal
 
     inc rcx
@@ -36,7 +39,7 @@ strcmp_asm:
     ret
 
 .not_equal:
-    mov ah, [rdi + rcx]
-    cmp byte [rdi + rcx], ah
+    mov al, [rdi + rcx]
+    cmp byte [rdi + rcx], al
     jl .b_greater
     jmp .a_greater

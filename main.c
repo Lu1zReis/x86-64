@@ -29,7 +29,10 @@ int main(void)
 
     int saida = strcmp_asm(texto2, texto);
     printf("STRCMP: %d\n", saida);
+    char reverso[sizeof(origem)];
 
+    reverse_asm(origem, reverso, sizeof(origem)-1);
+    printf("reverse: %s\n", reverso);
 
     return 0;
 }
