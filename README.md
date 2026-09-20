@@ -4,7 +4,7 @@ Implementando bibliotecas:
 - [X] strlen
 - [X] memcpy
 - [X] memset
-- [ ] strcmp
+- [X] strcmp
 - [ ] reverse
 - [ ] to_upper
 - [ ] to_lower

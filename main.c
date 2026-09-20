@@ -4,6 +4,7 @@
 int main(void)
 {
     char texto[] = "Hello Assembly!";
+    char texto2[] = "Hello Assembly!";
     printf("Tamanho: %zu\n", strlen_asm(texto));
 
 
@@ -24,8 +25,11 @@ int main(void)
     char dest[6];
 
     char *res = memset_asm(dest, 'A', sizeof(dest)-1); // se deixarmos ate o limite, ele pode pegar o espaco da memoria de outra variavel
-
     printf("TESTE: %s\n", dest);
+
+    int saida = strcmp_asm(texto2, texto);
+    printf("STRCMP: %d\n", saida);
+
 
     return 0;
 }
